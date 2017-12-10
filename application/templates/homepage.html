@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dock Lights</title>
+    <script src="{{ url_for('static', filename='libs/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='libs/bootstrap.min.js') }}"></script>
+
+</head>
+<body>
+<form id="dock_light_controls" action="{{ url_for('homepage') }}" method="post">
+    <label for="color">Color</label>
+    <select name="color" id="color">
+        <option value="1">Red</option>
+        <option value="2">Green</option>
+        <option value="3">Blue</option>
+        <option value="4">Orange</option>
+        <option value="5">Turquoise</option>
+        <option value="6">Purple</option>
+        <option value="7">White</option>
+    </select>
+    <button type="submit" class="btn">Submit</button>
+</form>
+</body>
+</html>

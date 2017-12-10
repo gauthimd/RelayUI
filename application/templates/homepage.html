@@ -2,18 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dock Lights</title>
+    <link rel="icon" href="{{ url_for('static', filename='icons/favicon.png') }}">
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
-
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mode').change(function () {
+                $('#dock_light_controls').submit();
+            })
+        })
+    </script>
 
 </head>
 <body>
-<div class="form-group">
+<div class="form-group col-6 col-sm-12 col-xs-12">
     <form id="dock_light_controls" action="{{ url_for('homepage') }}" method="post">
-        <label for="mode">Input</label>
-        <select name="mode" class="form-control input-lg col-8 offset-2" id="color">
+        <label for="mode">Pick a Mode</label>
+        <select name="mode" class="form-control input-lg" id="mode">
             <option value="1" class="form-control">Red</option>
             <option value="2" class="form-control">Green</option>
             <option value="3" class="form-control">Blue</option>
@@ -29,7 +37,6 @@
             <option value="Up" class="form-control">Mode Up</option>
             <option value="Down" class="form-control">Mode Down</option>
         </select>
-        <button type="submit" class="btn">Submit</button>
     </form>
 </div>
 </body>

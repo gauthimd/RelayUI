@@ -2,24 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
     <title>Dock Lights</title>
-    <script src="{{ url_for('static', filename='libs/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='libs/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.js') }}"></script>
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet" type="text/css" media="all"/>
+
 
 </head>
 <body>
-<form id="dock_light_controls" action="{{ url_for('homepage') }}" method="post">
-    <label for="color">Color</label>
-    <select name="color" id="color">
-        <option value="1">Red</option>
-        <option value="2">Green</option>
-        <option value="3">Blue</option>
-        <option value="4">Orange</option>
-        <option value="5">Turquoise</option>
-        <option value="6">Purple</option>
-        <option value="7">White</option>
-    </select>
-    <button type="submit" class="btn">Submit</button>
-</form>
+<div class="form-group">
+    <form id="dock_light_controls" action="{{ url_for('homepage') }}" method="post">
+        <label for="mode">Input</label>
+        <select name="mode" class="form-control input-lg col-8 offset-2" id="color">
+            <option value="1" class="form-control">Red</option>
+            <option value="2" class="form-control">Green</option>
+            <option value="3" class="form-control">Blue</option>
+            <option value="4" class="form-control">Orange</option>
+            <option value="5" class="form-control">Turquoise</option>
+            <option value="6" class="form-control">Purple</option>
+            <option value="0" class="form-control">White</option>
+            <option value="Ok" class="form-control">Fade Off</option>
+            <option value="Pound" class="form-control">Brightness Up</option>
+            <option value="Star" class="form-control">Brightness Down</option>
+            <option value="Right" class="form-control">Speed Up</option>
+            <option value="Left" class="form-control">Speed Down</option>
+            <option value="Up" class="form-control">Mode Up</option>
+            <option value="Down" class="form-control">Mode Down</option>
+        </select>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
 </body>
 </html>

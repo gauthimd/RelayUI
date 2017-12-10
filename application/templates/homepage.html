@@ -18,10 +18,10 @@
 
 </head>
 <body>
-<div class="form-group col-6 col-sm-12 col-xs-12">
+<div class="form-group col-12 col-sm-12 col-xs-12">
     <form id="dock_light_controls" action="{{ url_for('homepage') }}" method="post">
-        <label for="mode">Pick a Mode</label>
         <select name="mode" class="form-control input-lg" id="mode">
+            <option value="none" class="form-control" disabled>- Pick a Mode -</option>
             <option value="1" class="form-control">Red</option>
             <option value="2" class="form-control">Green</option>
             <option value="3" class="form-control">Blue</option>

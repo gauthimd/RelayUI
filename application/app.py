@@ -16,6 +16,7 @@ def create_app():
                          '4': 'Orange',
                          '5': 'Turquoise',
                          '6': 'Purple',
+                         '7': 'Yellow',
                          'Ok': 'Off',
                          'Pound': 'Brightness Up',
                          'Star': 'Brightness Down',
